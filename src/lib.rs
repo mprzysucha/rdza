@@ -39,10 +39,11 @@ pub mod exercises {
         }
         let mut max_elem = v[0];
         let mut max_count = -1;
-        for e in &counter {
-            if e.1 > &max_count {
-                max_elem = **e.0;
-                max_count = *e.1;
+        println!("counter: {:?}", counter);
+        for e in counter {
+            if e.1 > max_count {
+                max_elem = *e.0;
+                max_count = e.1;
             }
         }
         max_elem
